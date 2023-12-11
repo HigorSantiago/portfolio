@@ -1,0 +1,66 @@
+.introducao{
+  max-width: 1200px;
+  padding: 40px;
+  margin: 0 auto; /* Para manter alinhado */
+  display: grid; 
+  grid-template-columns: 1fr 2fr;
+  gap: 100px;
+  align-items: center;
+}
+
+
+.introducao h1{
+  font-size: 4.5rem;
+  line-height: 1.125;
+  margin-bottom: 30px;
+  position: relative; /*Para que o detalhe use a posição do H1 e não a da main*/
+}
+
+.introducao h1::before{
+  content: ""; /* Para poder visualizar o conteudo */
+  display: block; 
+  width: 130px;
+  height: 100px;
+  background: url("/img/detalhe.svg" ) no-repeat center; /* no-repeat, para não repetir, center = centralizar */
+  position: absolute; /* Para poder posicionar o detalhe no local desejado */
+  left: -40px;
+  top: -20px;
+  z-index: -1; /* Para posicionar o detalhes atras do texto */
+}
+
+.introducao p{
+  font-size: 1.5rem;
+  color: #525252;
+}
+
+@media (max-width : 1000px){
+  .introducao h1{
+    font-size: 3rem;
+  }
+}
+
+@media (max-width : 800px){
+  .introducao {
+    grid-template-columns: 1fr 1fr; /* Ja que diminuiu tamanho, dividiu  o conteudo meio a meio */
+    gap: 60px; /* Diminiuiu o espaçamento entre os itens */
+  }
+  .introducao h1 {
+    font-size: 2rem;
+  }
+  .introducao h1::before{
+    width: 30px;
+    height: 10px;
+    margin-left: 40px;
+  }
+
+}
+
+@media (max-width : 400px){
+  .introducao{
+    grid-template-columns: 1fr;
+  }
+
+  .introducao img{
+    display: none; /*Para remover a imagem ja que esta muito pequena e não é tao importante */
+  }
+}

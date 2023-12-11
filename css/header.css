@@ -1,0 +1,46 @@
+.header{
+  max-width: 1200px;
+  padding: 40px; /*Espaçamento entre os itens */
+  margin: 0 auto; /* Com a altura maxima definida, para alinhar o header, pode usar o margin left e right */
+  display: flex; /* Alinha Itens lado a lado */
+  justify-content: space-between; /* Para dar o maximo de espaço entre os itens */
+  align-items: center; /* Para alinhar os itens verticalmente ao centro*/
+}
+
+.header-menu{
+  display: flex; /* Alinhar itens do menu lado a lado */
+  flex-wrap: wrap; /* Caso diminua mais que o tamanho quebre os itens */
+  gap: 10px; /* Espaçamento entre os itens */
+  justify-content: center;
+}
+
+.header-menu a{
+  font-size: 1.125rem; 
+  line-height: 1.3; /* Altura da Linha */
+  padding: 10px 20px; /*Padding l/d e b/t*/
+  text-decoration: none;
+  color: #141414;
+  display: block; /* Para pegar corretamente os valores de padding */
+  border-bottom: 2px solid #fff;
+}
+
+.header-menu a:hover{
+  border-bottom: 2px solid #141414;
+  color: #545454;
+  transition: 300ms linear;
+  
+}
+
+@media ( max-width:700px ){
+  .header{
+    flex-direction: column; /*colocando a orientação como horizontal */
+    gap: 40px; /* espaçamento entre a logo e o menu */
+    padding: 20px; /*diminuindo gap*/
+  }
+
+  .header a{
+    background-color: #f6f6f6;
+    border-radius: 8px;
+  }
+
+}

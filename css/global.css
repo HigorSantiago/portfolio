@@ -1,0 +1,42 @@
+body{
+  margin: 0px;
+  font-family: 'Fira Sans',Arial, sans-serif;
+  color: #141414
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0px;
+}
+
+ul{
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+
+img{
+  max-width: auto;
+  display: block;
+}
+
+.subtitulo{
+  font-size: 8rem;
+  line-height: 1; /* Para quando quebrar as letras ficarem proximas */
+  word-break:  break-all; /*Para quebrar a palavra */
+  max-width: 4ch; /* Para quebrar em 4 letras (lembrando que pegar de referencia o tamanho o 0)*/
+  text-transform: uppercase;
+}
+
+/* Media para alterar o subtitulo */
+@media (max-width:800px){
+  .subtitulo{
+    font-size: 3rem;
+    text-transform: capitalize; /*Para alterar o texto, transformando apenas a primeira letra maiscula */
+    max-width: initial !important; /*Colocar o width dele para o tamanho inicial */
+    /* Importante para definir uma prioridade para ele sobre outros seletores */
+  }
+}
